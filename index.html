@@ -6,7 +6,7 @@
 <style type="text/css">
 
     body{
-      background:url(bg.png) center;
+      background:url() center;
       color :#000;
     }
     video {
@@ -59,14 +59,6 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-
-.parent{
-background: url('scan-icon.gif') no-repeat center; 
- position: relative;
- display:block;
-  top: 0;
-  left: 0;
-  }
 .modal {
 display: none; 
 position: fixed; 
@@ -80,50 +72,11 @@ overflow: auto;
 background-color: rgb(0,0,0); 
 background-color: rgba(0,0,0,0.4); 
 }
-.modal-content {
-background-color: #000;
-margin: auto;
-padding: 10px;
-border: 2px solid #111;
-width: 260px;
--moz-border-radius:3px; 
--khtml-border-radius:5px; 
--webkit-border-radius:5px ; 
-border-radius:5px ;
-color:red;
-font-weight:bold
-}
-.close {float: right;
-font-size: 15px;
-font-weight: bold;}
-.close:hover,.close:focus {
-text-decoration: none;
-cursor: pointer;
-}
-#mainbody{
-width:100%;
-display:none;
-}
-.selector{
-	display:none;
-	visibility: hidden;
-}
-#result{
-display:none;
-	visibility: hidden;
-}
 
-#v{
-width:240px;
-height:200px;
-}
-#qr-canvas{
-display:none;
-}
 #outdiv{
 padding:0;
-width:240px;
-height:200px;
+width:400px;
+height:480px;
 border: solid;
 border-width: 3px 3px 3px 3px;
 -moz-border-radius:3px; 
@@ -133,35 +86,7 @@ border-radius:5px ;
 color:#555;
 background: #000;
 }
-.tsel{
-padding:0;
-}
-blink {
-    -webkit-animation: 2s linear infinite condemned_blink_effect; // for android
-    animation: 2s linear infinite condemned_blink_effect;
-}
-@-webkit-keyframes condemned_blink_effect { // for android
-    0% {
-        visibility: hidden;
-    }
-    50% {
-        visibility: hidden;
-    }
-    100% {
-        visibility: visible;
-    }
-}
-@keyframes condemned_blink_effect {
-    0% {
-        visibility: hidden;
-    }
-    50% {
-        visibility: hidden;
-    }
-    100% {
-        visibility: visible;
-    }
-}
+
 </style>
 <script type="text/javascript" src="llqrcode.js"></script>
 <script type="text/javascript" src="webqr.js"></script>
@@ -173,10 +98,10 @@ blink {
         <div class="camera" id="outdiv"></div>
         <div style="display: table;">
           <div style="display: table-row;">
-            <div style="display: table-cell; padding:3px;">
+            <div style="display: table-cell; padding:5px;">
               <div class="btn" id="reload" onclick="location.reload();"><i class="icon icon-arrows-cw">&#xe800;</i> Reload Camera</div>
             </div>
-            <div style="display: table-cell; padding:3px;">
+            <div style="display: table-cell; padding:5px;">
               <!-- <div class="btn" onclick="document.location = 'googlechrome://navigate?url=https://jayamirudin.github.io/qrcode/';"></div> -->
               <a class="btn" href="http://laksa19.github.io/myqr"><i class="icon icon-chrome-1">&#xf268;</i> Open in Chrome</a>
             </div>
